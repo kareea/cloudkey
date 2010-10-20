@@ -1,0 +1,3 @@
+module Cloudkey
+  # Your code goes here...
+end

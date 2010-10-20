@@ -1,3 +1,8 @@
+require 'cloudkey/security_level'
+require 'cloudkey/api'
+
 module Cloudkey
-  # Your code goes here...
+  def self.authenticate *args
+    API::new *args
+  end
 end

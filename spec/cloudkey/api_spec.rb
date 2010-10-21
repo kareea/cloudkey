@@ -41,12 +41,8 @@ describe Cloudkey::API do
   end
 
   describe "Signing" do
-    before(:each) do
-      @api = Cloudkey::API.new "foo", "bar"
-    end
-
-    it "should sign a string" do
-
+    it "should sign 'hello world' with sEcReT_KeY and returns 'b5d93121a6dc87562b46beb8ba809ace'" do
+      Cloudkey::API.sign("hello world", "sEcReT_KeY").should == 'b5d93121a6dc87562b46beb8ba809ace'
     end
   end
 end

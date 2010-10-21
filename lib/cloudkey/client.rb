@@ -10,7 +10,9 @@ module Cloudkey
     end
     
     def authenticate_request request
-      request[:auth] = "#{@api.user_infos}:#{@api.sign(user_infos)}"
+      request[:auth] = "#{@api.user_infos}:#{API::sign(user_infos)}"
+      
+      
     end
     
     def create_request name, method, args

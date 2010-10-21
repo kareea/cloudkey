@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 require 'cloudkey/client'
 
 require 'cloudkey/file'
@@ -37,6 +39,10 @@ module Cloudkey
     
     def file
       File.new self
+    end
+    
+    def self.sign message, secret
+      Digest::MD5.hexdigest(message + secret)
     end
     
     def self.normalize payload

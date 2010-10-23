@@ -1,3 +1,5 @@
+require 'json'
+
 module Cloudkey
   class Client
     def initialize api
@@ -6,13 +8,25 @@ module Cloudkey
     
     protected
     def call method, args={}
-      @request = create_request self.class.name.downcase, method, args
+      @request = create_request self.class.name.downcase.gsub("Cloudkey::",''), method, args
+      
+      authenticate_request @request
+      
+      curl.http_post @request.to_json
+      
+      JSON.parse curl.body_str
     end
     
     def authenticate_request request
-      request[:auth] = "#{@api.user_infos}:#{API::sign(user_infos)}"
-      
-      
+      request[:auth] = "#{@api.user_infos}:#{API::sign(@api.user_infos + API.normalize(request), @api.key)}"
+    end
+    
+    def curl
+      @curl ||= Curl::Easy.new @api.target do |c|
+        c.useragent               = "cloudkey-rb #{Cloudkey::VERSION}"
+        c.headers['Content-Type'] = "application/json"
+        c.proxy_url               = @api.proxy if @api.proxy
+      end
     end
     
     def create_request name, method, args

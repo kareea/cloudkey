@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   
   s.add_development_dependency "rspec", "~> 2.0.1"
+  s.add_dependency 'curb', "~> 0.7.8"
 end

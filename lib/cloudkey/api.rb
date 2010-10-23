@@ -8,6 +8,7 @@ require 'cloudkey/media'
 module Cloudkey
   class API
     attr_accessor :user_id, :key, :base_url, :proxy, :act_as_user
+    attr_reader :target
     
     # New API versions that break compatibility would probably change the endpoint
     END_POINT = "/api"

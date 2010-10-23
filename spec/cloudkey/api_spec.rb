@@ -45,4 +45,6 @@ describe Cloudkey::API do
       Cloudkey::API.sign("hello world", "sEcReT_KeY").should == 'b5d93121a6dc87562b46beb8ba809ace'
     end
   end
+  
+
 end

@@ -6,10 +6,13 @@ module Cloudkey
       @api = api
     end
     
+    def method_missing method_id, *args, &block
+      call(method_id, *args, &block)
+    end
+    
     protected
     def call method, args={}
-      @request = create_request self.class.name.downcase.gsub("Cloudkey::",''), method, args
-      
+      @request = create_request self.class.name.gsub("Cloudkey::",'').downcase, method, args
       authenticate_request @request
       
       curl.http_post @request.to_json

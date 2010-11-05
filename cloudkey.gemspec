@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jean-Hadrien Chabran", "Boubacar Diallo"]
   s.email       = ["jh@kareea.com"]
   s.homepage    = "http://rubygems.org/gems/cloudkey"
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Bla bla}
+  s.description = %q{bla bla}
 
   s.rubyforge_project = "cloudkey"
 

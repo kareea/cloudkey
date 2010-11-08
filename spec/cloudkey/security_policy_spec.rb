@@ -9,6 +9,7 @@ module Cloudkey
     describe "Default behavior" do  
       it "should default to no policy" do
         @policy.should be_none
+        @policy.expires.should == 7200
       end
     end
     
@@ -40,6 +41,13 @@ module Cloudkey
         @policy.referers =  ["http://google.com", ""]
         -> { @policy.level }.should raise_error(SecurityPolicy::REFERERS_FORMAT_ERROR)
       end      
+    end
+    
+    describe "Expires" do
+      it "should accept an expire time" do
+        @policy.expires = 5000
+        @policy[:expires].should be(5000)
+      end
     end
   end    
 end

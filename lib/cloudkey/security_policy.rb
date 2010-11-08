@@ -2,8 +2,9 @@ module Cloudkey
   class SecurityPolicy < Hash
     IP_FORMAT_ERROR       = Class.new(Exception)
     REFERERS_FORMAT_ERROR = Class.new(Exception)
+    
     def initialize opts={}
-      replace opts
+      replace({:expires => 7200}).merge(opts)
     end    
       
     def method_missing method_id, *args, &block
@@ -20,7 +21,7 @@ module Cloudkey
     end
   
     def none?
-      empty?
+      empty? || keys == [:expires]
     end
     
     def delegate?

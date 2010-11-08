@@ -46,6 +46,10 @@ module Cloudkey
       Digest::MD5.hexdigest(message + secret)
     end
     
+    def self.sign_url
+      
+    end
+    
     def self.normalize payload
       case payload
       when Array

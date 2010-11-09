@@ -1,6 +1,6 @@
 module Cloudkey
   class Media < Client
-    def embbeded_url id, security_level = SecurityPolicy.new
+    def embedded_url id, security_level = SecurityPolicy.new
       url = "#{@api.base_url}/embed/#{@api.user_id}/#{id}"      
       API.sign_url url, @api.key, security_level
     end

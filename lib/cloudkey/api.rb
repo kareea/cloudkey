@@ -46,8 +46,30 @@ module Cloudkey
       Digest::MD5.hexdigest(message + secret)
     end
     
-    def self.sign_url
+    def self.sign_url url, secret, security_policy = SecurityPolicy.new
+      (url, query) = url.split("?")
       
+      expires = security_policy.expires.to_s
+      
+      rand   = (('a'..'z').to_a + (1..9).to_a).shuffle[0..7].join('')
+      food   = security_policy.level.to_s
+      food  << url  << expires.to_s
+      food  << rand << secret << security_policy.private_parameters.join('')
+      food  << security_policy.encoded_public_parameters if security_policy.encoded_public_parameters
+      
+      digest = Digest::MD5.hexdigest(food) 
+      
+      result = url
+      result << "?"
+      result << query + '&' if query
+      result << "auth="
+      result << expires.to_s  << "-"
+      result << security_policy.level.to_s << "-"
+      result << rand << "-"
+      result << digest      
+      result << "-#{security_policy.encoded_public_parameters}" if security_policy.encoded_public_parameters
+      
+      result
     end
     
     def self.normalize payload

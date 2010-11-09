@@ -8,7 +8,7 @@ module Cloudkey
       USER_AGENT        = 1 << 3
       USE_ONCE          = 1 << 4
       COUNTRIES         = 1 << 5
-      REFERERS           = 1 << 6
+      REFERERS          = 1 << 6
     end
   end
 end

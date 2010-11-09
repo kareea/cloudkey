@@ -9,7 +9,7 @@ module Cloudkey
     describe "Default behavior" do  
       it "should default to no policy" do
         @policy.should be_none
-        @policy.expires.should == 7200
+        @policy.expires_in.should == 7200
       end
     end
     
@@ -45,8 +45,8 @@ module Cloudkey
     
     describe "Expires" do
       it "should accept an expire time" do
-        @policy.expires = 5000
-        @policy[:expires].should be(5000)
+        @policy.expires_in = 5000
+        @policy.expires_in.should be(5000)
       end
     end
   end    

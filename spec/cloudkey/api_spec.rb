@@ -44,7 +44,9 @@ describe Cloudkey::API do
     it "should sign 'hello world' with sEcReT_KeY and returns 'b5d93121a6dc87562b46beb8ba809ace'" do
       Cloudkey::API.sign("hello world", "sEcReT_KeY").should == 'b5d93121a6dc87562b46beb8ba809ace'
     end
+    
+    it "it should sign an url" do
+      Cloudkey::API.sign_url("http://google.fr","olol", Cloudkey::SecurityPolicy.new(:ip => "192.168.0.1"))
+    end
   end
-  
-
 end

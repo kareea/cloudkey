@@ -23,7 +23,7 @@ Usage
 		p @cloudkey.media.list(:fields => [:id])
 
 		# Get an embedded player for your video, with its usage restricted to a specific IP address
-		p @cloudkey.media.embedded_url VIDEO_ID, Cloudkey::SecurityPolicy.new(:ip => "88.0.0.1", 
+		p @cloudkey.media.embedded_url VIDEO_ID, Cloudkey::SecurityPolicy.new(:ip => "88.0.0.1")
 		
 License
 -------

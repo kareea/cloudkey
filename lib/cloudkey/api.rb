@@ -77,7 +77,7 @@ module Cloudkey
       when Array
         payload.collect { |element| normalize element }.join('')
       when Hash
-        payload.to_a.sort { |a,b| a.first <=> b.first }.collect {|array| array.first.to_s + normalize(array.last)}.join('')
+        payload.to_a.sort_by {|a,b| a.to_s }.collect {|array| array.first.to_s + normalize(array.last)}.join('')
       else
         payload.to_s
       end

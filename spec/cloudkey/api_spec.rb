@@ -30,6 +30,7 @@ describe Cloudkey::API do
       'foo42bar'                  => ['foo', 42, 'bar'],
       'pink3red2yellow1'          => {'yellow' => 1, 'red' => 2, 'pink' => 3},
       'foo42pink3red2yellow1bar'  => ['foo', 42, {'yellow' => 1, 'red' => 2, 'pink' => 3}, 'bar'],
+      'foo42pink3red2yellow1bar'  => [:foo, 42, {:yellow => 1, :red => 2, :pink => 3}, :bar],
       '12'                        => [nil, 1,2],
       ''                          => nil,
       '212345'                    => {2 => [nil, 1,2], 3 => nil, 4 => 5}

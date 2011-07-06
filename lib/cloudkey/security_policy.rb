@@ -61,7 +61,7 @@ module Cloudkey
     
     def referers?
       if @options[:referers] && !@options[:referers].empty?
-        raise REFERERS_FORMAT_ERROR unless @options[:referers].inject(true) { |result, url| result && url.match(/https?:\/\/(.*)/) }
+        raise REFERERS_FORMAT_ERROR unless @options[:referers].all? { |url| url.match(/https?:\/\/(.*)/) }
         true
       end
     end

@@ -21,5 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   
   s.add_development_dependency "rspec", "~> 2.6.0"
+  s.add_development_dependency "webmock", "~> 1.6.4"
+  s.add_development_dependency "vcr", "~> 1.10.3"
   s.add_dependency 'curb', "~> 0.7.15"
 end

@@ -1,12 +1,14 @@
 PATH
   remote: .
   specs:
-    cloudkey (0.0.1)
+    cloudkey (0.0.2)
       curb (~> 0.7.15)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.2.6)
+    crack (0.1.8)
     curb (0.7.15)
     diff-lcs (1.1.2)
     rspec (2.6.0)
@@ -17,6 +19,10 @@ GEM
     rspec-expectations (2.6.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.6.0)
+    vcr (1.10.3)
+    webmock (1.6.4)
+      addressable (> 2.2.5, ~> 2.2)
+      crack (>= 0.1.7)
 
 PLATFORMS
   ruby
@@ -24,3 +30,5 @@ PLATFORMS
 DEPENDENCIES
   cloudkey!
   rspec (~> 2.6.0)
+  vcr (~> 1.10.3)
+  webmock (~> 1.6.4)

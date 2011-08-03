@@ -2,9 +2,8 @@ module Cloudkey
   class File < Client
     def upload_file path, &block
       raise "File not found" unless ::File.exists? path
-      
+
       curl(fetch_upload_url) do |c|
-        puts "upload! #{c.url}"
         c.multipart_form_post = true
         c.headers             = false
         c.follow_location     = true
@@ -19,9 +18,9 @@ module Cloudkey
         JSON.parse c.body_str
       end
     end
-    
+
     protected
-    
+
     def fetch_upload_url
       upload["result"]["url"]
     end

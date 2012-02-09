@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   
   s.add_development_dependency "rspec", "~> 2.8.0"
   s.add_development_dependency "webmock", "~> 1.7.10"
-  s.add_development_dependency "vcr", "~> 1.11.3"
+  s.add_development_dependency "vcr", "~> 2.0.0.rc1"
   s.add_development_dependency "rake"
   s.add_dependency 'curb', "~> 0.8.0"
 end

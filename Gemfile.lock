@@ -20,7 +20,7 @@ GEM
     rspec-expectations (2.8.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.8.0)
-    vcr (1.11.3)
+    vcr (2.0.0.rc1)
     webmock (1.7.10)
       addressable (~> 2.2, > 2.2.5)
       crack (>= 0.1.7)
@@ -32,5 +32,5 @@ DEPENDENCIES
   cloudkey!
   rake
   rspec (~> 2.8.0)
-  vcr (~> 1.11.3)
+  vcr (~> 2.0.0.rc1)
   webmock (~> 1.7.10)

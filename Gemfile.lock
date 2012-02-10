@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cloudkey (0.0.2)
+    cloudkey (0.0.3)
       curb (~> 0.8.0)
 
 GEM

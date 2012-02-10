@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Cloudkey do
   context "Public API" do
-    #use_vcr_cassette
+    use_vcr_cassette
 
     it "should provide an authenticate method on Cloudkey" do
       Cloudkey.should respond_to :authenticate

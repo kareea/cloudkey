@@ -1,0 +1,163 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.dmcloud.net/api
+    body: ! '{"call":"media.list","args":{"fields":["meta.title"],"per_page":20},"auth":":f588b19a1e8a9e6c65a88ae37ec2dd1a"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.6
+      Date:
+      - Fri, 10 Feb 2012 17:32:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Response-Time:
+      - 4.233 ms
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      Set-Cookie:
+      - dmvk=f7847df6ed2f4c3c82708ed0a831961b; Domain=.dmcloud.net; Path=/
+      X-Dc-Node:
+      - www-01
+    body: ! '{"result": {"list": [{"meta": {"title": "Comment ajouter des informations
+      sur un graphique avec excel 2007"}}, {"meta": {"title": "Comment ajuster la
+      taille des colonnes et des lignes avec excel 2007"}}, {"meta": {"title": "Comment
+      ajouter des en-t\u00eates et des pieds de page avec excel 2007"}}, {"meta":
+      {"title": "Comment ajuster un tableau sur une page avec excel 2007"}}], "pages":
+      1, "on_this_page": 4, "per_page": 20, "total": 4, "page": 1}}'
+    http_version: !!null 
+  recorded_at: Fri, 10 Feb 2012 17:32:57 GMT
+- request:
+    method: post
+    uri: http://api.dmcloud.net/api
+    body: ! '{"call":"media.list","args":{"fields":["meta.title"],"per_page":20},"auth":"4f33d9c8f325e11c830016af:f588b19a1e8a9e6c65a88ae37ec2dd1a"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.6
+      Date:
+      - Fri, 10 Feb 2012 17:32:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Response-Time:
+      - 4.233 ms
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      Set-Cookie:
+      - dmvk=f7847df6ed2f4c3c82708ed0a831961b; Domain=.dmcloud.net; Path=/
+      X-Dc-Node:
+      - www-01
+    body: ! '{"result": {"list": [{"meta": {"title": "Comment ajouter des informations
+      sur un graphique avec excel 2007"}}, {"meta": {"title": "Comment ajuster la
+      taille des colonnes et des lignes avec excel 2007"}}, {"meta": {"title": "Comment
+      ajouter des en-t\u00eates et des pieds de page avec excel 2007"}}, {"meta":
+      {"title": "Comment ajuster un tableau sur une page avec excel 2007"}}], "pages":
+      1, "on_this_page": 4, "per_page": 20, "total": 4, "page": 1}}'
+    http_version: !!null 
+  recorded_at: Fri, 10 Feb 2012 17:32:57 GMT
+- request:
+    method: post
+    uri: http://api.dmcloud.net/api
+    body: ! '{"call":"media.list","args":{"fields":["meta.title"],"per_page":20},"auth":"4f33d9c8f325e11c830016af:f588b19a1e8a9e6c65a88ae37ec2dd1a"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.6
+      Date:
+      - Fri, 10 Feb 2012 17:32:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Response-Time:
+      - 4.127 ms
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      Set-Cookie:
+      - dmvk=5db2b968588f4e3fa9b9f9c8c4f0f22e; Domain=.dmcloud.net; Path=/
+      X-Dc-Node:
+      - www-01
+    body: ! '{"result": {"list": [{"meta": {"title": "Comment ajouter des informations
+      sur un graphique avec excel 2007"}}, {"meta": {"title": "Comment ajuster la
+      taille des colonnes et des lignes avec excel 2007"}}, {"meta": {"title": "Comment
+      ajouter des en-t\u00eates et des pieds de page avec excel 2007"}}, {"meta":
+      {"title": "Comment ajuster un tableau sur une page avec excel 2007"}}], "pages":
+      1, "on_this_page": 4, "per_page": 20, "total": 4, "page": 1}}'
+    http_version: !!null 
+  recorded_at: Fri, 10 Feb 2012 17:32:57 GMT
+- request:
+    method: post
+    uri: http://api.dmcloud.net/api
+    body: ! '{"call":"media.list","args":{"fields":["meta.title"],"per_page":20},"auth":"4f33d9c8f325e11c830016af:f588b19a1e8a9e6c65a88ae37ec2dd1a"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.6
+      Date:
+      - Fri, 10 Feb 2012 17:32:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Response-Time:
+      - 4.127 ms
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      Set-Cookie:
+      - dmvk=5db2b968588f4e3fa9b9f9c8c4f0f22e; Domain=.dmcloud.net; Path=/
+      X-Dc-Node:
+      - www-01
+    body: ! '{"result": {"list": [{"meta": {"title": "Comment ajouter des informations
+      sur un graphique avec excel 2007"}}, {"meta": {"title": "Comment ajuster la
+      taille des colonnes et des lignes avec excel 2007"}}, {"meta": {"title": "Comment
+      ajouter des en-t\u00eates et des pieds de page avec excel 2007"}}, {"meta":
+      {"title": "Comment ajuster un tableau sur une page avec excel 2007"}}], "pages":
+      1, "on_this_page": 4, "per_page": 20, "total": 4, "page": 1}}'
+    http_version: !!null 
+  recorded_at: Fri, 10 Feb 2012 17:32:57 GMT
+recorded_with: VCR 2.0.0.rc1
